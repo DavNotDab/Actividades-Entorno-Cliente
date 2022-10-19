@@ -1,0 +1,136 @@
+* {
+    background-color: rgb(213, 213, 213);
+    padding: 1%;
+    font-weight: bold;
+}
+
+body {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+hr {
+    padding: 5px;
+    margin-top: 20px;
+}
+
+h3 {
+    color: purple;
+}
+
+h4 {
+    color: rgb(152, 0, 0);
+}
+
+#bienvenida {
+    padding: 0;
+}
+
+.red {
+    color: rgb(118, 0, 0);
+}
+
+.green {
+    color: rgb(1, 96, 1);
+}
+
+.blue {
+    color: rgb(0, 90, 119);
+}
+
+button {
+    color: purple;
+    margin: 1%;
+    padding: 2%;
+    border: 3px solid purple;
+    border-radius: 10%;
+    transition: .4s;
+}
+
+button:hover{
+    cursor: pointer;
+    color: rgb(152, 0, 152); 
+    margin: 2%;
+    padding: 1%; 
+    border: 3px solid rgb(152, 0, 152);
+}
+
+.extra {
+    min-height: 20vh;
+    display: flex;
+    padding: 0%;
+    align-items: center;
+}
+
+#extra_image {
+    min-height: 20vh;
+    min-width: 20vh;
+    background-image: url("https://picsum.photos/250?random");
+    background-size: cover;
+    border-radius: 5%;
+}
+
+.extra_button {
+    min-height: 20vh;
+    min-width: 20vh;
+    display: flex;
+    align-items: center;
+}
+
+#extra_link {
+    text-align: center;
+    max-width: 50%;
+    text-decoration: none;
+    padding: 10%;
+    margin-left: 5%;
+    color: purple;
+    border: 3px solid purple;
+    border-radius: 10%;
+    transition: .4s;
+}
+
+#extra_link:hover {
+    cursor: pointer;
+    color: rgb(152, 0, 152); 
+    padding: 5%; 
+    border: 3px solid rgb(152, 0, 152);
+}
+
+footer {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+footer hr {
+    color: darkgrey;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    padding: 0%;
+
+}
+
+.copyright {
+    display: flex;
+    padding: 0;
+
+}
+
+.copy {
+    display: flex;
+    min-width: 50%;
+    text-align: center;
+    align-items: center;
+    margin-left: 10%;
+    padding-bottom: 0;
+}
+
+.github a {
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    color: black;
+}
+
+.logo {
+    max-width: 32px;
+}

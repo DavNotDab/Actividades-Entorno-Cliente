@@ -1,0 +1,97 @@
+* {
+    background-color: lightgrey;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000060;
+}
+
+.form {
+    padding: 20px;
+    border: solid #000060 3px;
+    border-radius: 10px;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    font-weight: 700;
+}
+
+input {
+    border: 2px solid #000060;
+    border-radius: 5px;
+}
+
+.submit, button {
+    background-color: #c1c1ff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: 550;
+    transition: ease-out .5s;
+}
+
+button {
+    opacity: 0;
+}
+
+.submit:hover, button:hover {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: -5px;
+}
+
+.submit:active, button:active {
+    background-color: #a7a7fb;
+    transition: 0s;
+}
+
+#titulo {
+    font-weight: 700;
+}
+
+
+footer {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+footer hr {
+    color: darkgrey;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    padding: 0%;
+
+}
+
+.copyright {
+    display: flex;
+    padding: 0;
+
+}
+
+.copy {
+    display: flex;
+    min-width: 50%;
+    text-align: center;
+    align-items: center;
+    margin-left: 10%;
+    padding-bottom: 0;
+}
+
+.github a {
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    color: black;
+}
+
+.logo {
+    max-width: 32px;
+}

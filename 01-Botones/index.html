@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!--EJERCICIO 1-->
+    <h4>Ej 1: Crea una web en un único archivo html que mediante script ponga el siguiente texto: “Mi primer script”</h4>
+
+    <script>
+        document.write("Mi primer script")
+    </script>
+
+
+    <hr>
+    <!--EJERCICIO 2-->
+    <h4>Ej 2: Realiza el ejercicio anterior en un fichero script separado</h4>
+
+    <script src="script.js"></script>
+
+
+    <hr>
+    <!--EJERCICIO 3-->
+    <h4>Ej 3: Crea una web con un botón de tal manera que cuando lo pulses escriba el siguiente mensaje por consola: “Soy la consola”</h4>
+
+    <button type="button" id="boton">Click</button>
+
+    <script>
+        document.getElementById("boton").onclick = function(){
+            console.log("Soy la consola")
+        }
+
+    </script>
+
+
+    <hr>
+    <!--EJERCICIO 4-->
+    <h4>Ej 4: Modifica el ejercicio anterior para que la salida sea mediante una alerta en una ventana flotante.</h4>
+
+    <button type="button" id="boton2">Click</button>
+
+    <script>
+        document.getElementById("boton2").onclick = function(){
+            window.alert("Soy la consola")
+        }
+
+    </script>
+
+
+    <hr>
+    <!--EJERCICIO 5-->
+    <h4>Ej 5: Diseña una web con tres botones para que al pulsarlos se genere un mensaje de bienvenida
+        en ruso, español e inglés en la misma página. El mensaje irá en un párrafo (etiqueta &lt;p&gt;). Se
+        pide que los mensajes tengan un color diferente dependiendo del idioma.</h4>
+
+    <button type="button" id="botonEs">Click ES</button>
+    <button type="button" id="botonEn">Click EN</button>
+    <button type="button" id="botonRu">Click RU</button>
+    <br>
+    <p id="bienvenida"></p>
+
+
+    <hr>
+    <!--EJERCICIO 6-->
+    <h4>Ej 6: Modifica el código anterior para que los mensajes de bienvenida se generen con alertas</h4>
+
+    <button type="button" id="botonEs2">Click ES</button>
+    <button type="button" id="botonEn2">Click EN</button>
+    <button type="button" id="botonRu2">Click RU</button>
+    <br>
+
+
+    <hr>
+    <!--EJERCICIO 7-->
+    <h4>Ej 7: Cambia el código anterior para que los mensajes de bienvenida se generen en consola.</h4>
+
+    <button type="button" id="botonEs3">Click ES</button>
+    <button type="button" id="botonEn3">Click EN</button>
+    <button type="button" id="botonRu3">Click RU</button>
+    <br>
+
+    
+    <hr>
+    <!--EJERCICIO 8-->
+    <h4>Ej 8: Transforma el código anterior para que los mensajes de bienvenida se generen con el método write().</h4>
+
+    <button type="button" id="botonEs4">Click ES</button>
+    <button type="button" id="botonEn4">Click EN</button>
+    <button type="button" id="botonRu4">Click RU</button>
+    <br>
+    
+
+    <hr>
+    <!--EJERCICIO 9-->
+    <h4>Ej 9:</h4>
+
+    <h3>¿En qu&eacute; se diferencia JavaScript de Java?</h3>
+
+    <p>Una diferencia entre Java y JavaScript son que Java es un lenguaje
+        compilado, mientras que JavaScript es interpretado. Esto significa que 
+        se ejecuta l&iacute;nea a l&iacute;nea en lugar de todo de golpe despu&eacute;s 
+        de compilar.
+    </p>
+    <p>
+        Tambi&eacute;n se diferencian en la ejecución, ya que Java genera ejecutables 
+        pero JavaScript solo se ejecuta en el navegador.
+    </p>
+
+
+    <hr>
+    <!--EJERCICIO 10-->
+    <h4>Ej 10:</h4>
+
+    <h3>Describe las ventajas más importantes de usar JavaScript.</h3>
+
+    <p>Una de sus mayores ventajas es su velocidad, ya que al ser un 
+        lenguaje script es muy ligero y r&aacute;pido.
+    </p>
+    <p>Tambi&eacute;n es compatible con casi cualquier navegador y p&aacute;gina 
+        web, por lo que es muy c&oacute;modo de usar.
+    </p>
+    <p>A pesar de ser muy potente es sencillo, no es complejo de aprender y 
+        tiene muchas facilidades.
+    </p>
+    <p>Es muy vers&aacute;til, puede ser usado de muchas formas. Y m&aacute;s 
+        a&uacute;n con la cantidad de frameworks que existen.
+    </p>
+
+
+    <hr>
+    <!--EJERCIO EXTRA-->
+    <h4>Ej Extra:</h4>
+
+    <div class="extra">
+
+        <div id="extra_image"></div>
+        <div class="extra_button">
+            <a href="#extra_image" id="extra_link">Cambiar Imagen!</a>
+        </div>
+
+    </div>
+
+    <script src="script2.js"></script>
+
+    <footer>
+        <hr>
+        <div class="copyright">
+            <div class="copy">
+                <span>&copy; David Ballesteros Ortiz</span>
+            </div>
+            <div class="github">
+                <a href="https://github.com/DavNotDab">
+                    <img src="https://www.shareicon.net/data/256x256/2015/08/10/82884_github_4096x4096.png" alt="logo_github" class="logo">
+                    <span id="name">DavNotDab</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

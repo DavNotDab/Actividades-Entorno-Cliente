@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--EJERCICIO 1-->
+    <h4>Ej 1: Crea las siguientes funciones y llámalas desde una página XHTML para mostrar su funcionamiento:</h4>
+    <h4>A) Invertir cadena letra a letra</h4>
+
+    <div class="form">
+        <label for="cadena">Cadena: </label>
+        <input type="text" name="cadena" id="cadena"><br>
+        <input type="submit" value="Invertir" class="submit" onclick="invertirCadena(document.getElementById('cadena'))">
+    </div>
+
+    <span id="invertida"></span>
+
+
+    <h4>B) Invertir cadena palabra a palabra</h4>
+
+    <div class="form">
+        <label for="cadena2">Cadena: </label>
+        <input type="text" name="cadena2" id="cadena2"><br>
+        <input type="submit" value="Invertir" class="submit" onclick="invertirCadena2(document.getElementById('cadena2'))">
+    </div>
+
+    <span id="invertida2"></span>
+
+
+    <h4>C) Encontrar palabra m&aacute;s larga</h4>
+
+    <div class="form">
+        <label for="cadena3">Cadena: </label>
+        <input type="text" name="cadena3" id="cadena3"><br>
+        <input type="submit" value="Encontrar" class="submit" onclick="encontrarPalabraLarga(document.getElementById('cadena3'))">
+    </div>
+
+    <span id="palabraLarga"></span>
+
+
+    <h4>D) Encontrar palabras m&aacute;s largas que valor dado</h4>
+
+    <div class="form">
+        <label for="cadena4">Cadena: </label>
+        <input type="text" name="cadena4" id="cadena4"><br>
+        <label for="longitud">Longitud: </label>
+        <input type="number" name="longitud" id="longitud"><br>
+        <input type="submit" value="Encontrar" class="submit" onclick="filtrarPalabrasMasLargas(document.getElementById('cadena4'), document.getElementById('longitud'))">
+    </div>
+
+    <span id="palabrasLargas"></span>
+
+
+    <h4>E) Formatear la cadena y formarla bien</h4>
+
+    <div class="form">
+        <label for="cadena5">Cadena: </label>
+        <input type="text" name="cadena5" id="cadena5"><br>
+        <input type="submit" value="Formatear" class="submit" onclick="bienFormada(document.getElementById('cadena5'))">
+    </div>
+
+    <span id="bienFormada"></span>
+
+
+    <h4>Ej. 3 Realizar una función que permita localizar todas las apariciones de una subcadena dentro de otra.</h4>
+
+    <div class="form">
+        <label for="cadena6">Cadena: </label>
+        <input type="text" name="cadena6" id="cadena6"><br>
+        
+        <label for="cadena7">Cadena a buscar: </label>
+        <input type="text" name="cadena7" id="cadena7"><br>
+        <input type="submit" value="Localizar" class="submit" onclick="localizar(document.getElementById('cadena6').value, document.getElementById('cadena7').value)">
+    </div>
+
+    <span id="localizada"></span>
+
+
+    <h4>Ej. 7 Desarrolla una función que tomando como entrada una cadena de texto nos devuelva si es o no un palíndromo. </h4>
+
+    <div class="form">
+        <label for="cadena8">Cadena: </label>
+        <input type="text" name="cadena8" id="cadena8"><br>
+        <input type="submit" value="Comprobar" class="submit" onclick="palindromo(document.getElementById('cadena8').value)">
+    </div>
+
+    <span id="palindromo"></span>
+    
+
+    <h4>Ej. 9 Escribir un procedimiento que lea una palabra y la escriba (formateada dentro de una tabla)</h4>
+
+    <div class="form">
+        <label for="cadena9">Cadena: </label>
+        <input type="text" name="cadena9" id="cadena9"><br>
+        <input type="submit" value="Escribir" class="submit" onclick="formatear(document.getElementById('cadena9').value)">
+    </div>
+
+    <div>
+        <table id="tabla">
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+    
+
+    <footer>
+        <hr>
+        <div class="autor">
+            <div class="copy">
+                <span>&copy; David Ballesteros Ortiz</span>
+            </div>
+            <div class="github">
+                <a href="https://github.com/DavNotDab">
+                    <img src="https://www.shareicon.net/data/256x256/2015/08/10/82884_github_4096x4096.png" alt="logo_github" class="logo">
+                    <span id="name">DavNotDab</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+button {
+    color: purple;
+    margin: 1%;
+    padding: 2%;
+    border: 3px solid purple;
+    border-radius: 10%;
+    transition: .4s;
+}
+
+button:hover{
+    cursor: pointer;
+    color: rgb(152, 0, 152); 
+    margin: 2%;
+    padding: 1%; 
+    border: 3px solid rgb(152, 0, 152);
+}

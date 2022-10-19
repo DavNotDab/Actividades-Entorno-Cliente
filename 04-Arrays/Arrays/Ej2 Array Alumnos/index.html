@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array de Alumnos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Array de Alumnos</h1>
+
+    <span id="titulo">Datos del alumno:</span>
+    <div class="form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre"><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido"><br>
+        <label for="edad">Edad:</label>
+        <input type="text" name="edad" id="edad"><br>
+        <input type="submit" class="submit" value="Crear" onclick="crearAlumno()">
+        <button id="mostrar" onclick="mostrarAlumnos()">Mostrar Alumnos</button>
+    </div>
+
+
+    <h4 id="alumnos"></h4>
+
+    <script src="script.js"></script>
+
+    
+    <footer>
+        <hr>
+        <div class="copyright">
+            <div class="copy">
+                <span>&copy; David Ballesteros Ortiz</span>
+            </div>
+            <div class="github">
+                <a href="https://github.com/DavNotDab">
+                    <img src="https://www.shareicon.net/data/256x256/2015/08/10/82884_github_4096x4096.png" alt="logo_github" class="logo">
+                    <span id="name">DavNotDab</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
