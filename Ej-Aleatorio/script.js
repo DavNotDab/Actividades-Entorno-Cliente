@@ -1,10 +1,10 @@
 
-// INSERT YOUR OPTIONS HERE
-var alumnos=["1,2,3,4,5,6,7,8,9,10"];
+// INSERT YOUR VALUES HERE
+var values=["1","2","3","4","5","6","7","8","9","10"];
 
 function aleatorio() {
-    var num = Math.floor(Math.random()*alumnos.length);
-    if (num == anterior) num = Math.floor(Math.random()*alumnos.length);
+    var num = Math.floor(Math.random()*values.length);
+    if (num == anterior) num = Math.floor(Math.random()*values.length);
     anterior = num;
     return num;
 }
@@ -12,7 +12,7 @@ function aleatorio() {
 function spin() {
     var alumno = aleatorio();
     console.log(alumno);
-    voluntario.innerHTML = alumnos[alumno];
+    voluntario.innerHTML = values[alumno];
 }
 
 function parar() {
