@@ -1,0 +1,110 @@
+* {
+    background-color: #d3d3d3;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000060;
+}
+
+p {
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#crear, #borrar, #ajustes {
+    opacity: 0;
+}
+
+#crear {
+    position: absolute;
+    top: 40px;
+}
+
+#borrar {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+}
+
+#bienvenida {
+    position: absolute;
+    top: 0;
+}
+
+#ajustes {
+    position: absolute;
+    top: 100px;
+}
+
+input {
+    border: 2px solid #000060;
+    border-radius: 5px;
+}
+
+.submit {
+    background-color: #c1c1ff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: 550;
+    transition: ease-out .5s;
+}
+
+.submit:hover {
+    cursor: pointer;
+    background-color: #9b9be9;
+}
+
+.submit:active {
+    background-color: #5c5ca7;
+    transition: none;
+}
+
+footer {
+    position: absolute;
+    min-width: 100%;
+    bottom: 10px;
+    padding: 0;
+}
+
+footer hr {
+    color: darkgrey;
+    padding: 0%;
+
+}
+
+.autor {
+    display: flex;
+    padding: 0;
+}
+
+.copy {
+    display: flex;
+    min-width: 50%;
+    text-align: center;
+    align-items: center;
+    margin-left: 10%;
+    padding-bottom: 0;
+}
+
+.github a {
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    color: black;
+}
+
+.logo {
+    max-width: 32px;
+}
