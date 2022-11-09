@@ -12,31 +12,26 @@
     <div class="form" id="crear">
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" id="nombre">
-        <input type="submit" class="submit" value="Enviar" onclick="crearNombre(document.getElementById('nombre'))">
+        <input type="submit" class="submit" value="Enviar" onclick="crearCookie('nombre', document.getElementById('nombre').value)">
     </div>
 
     <p id="bienvenida"></p>
 
     <div class="form" id="borrar">
-        <input type="submit" class="submit" value="Cerrar Sesión" onclick="borrarNombre(document.getElementById('nombre'))">
+        <input type="submit" class="submit" value="Cerrar Sesión" onclick="borrarCookies()">
     </div>
 
     <div class="form" id="ajustes">
         <label for="fondo">Color de fondo:</label>
         <input type="color" name="fondo" id="fondo" value="#d3d3d3">
-        <input type="submit" class="submit" value="Cambiar" onclick="cambiarFondo(document.getElementById('fondo'))">
+        <input type="submit" class="submit" value="Cambiar" onclick="cambiarFondo('fondo', document.getElementById('fondo').value)">
 
         <br><br>
         
         <label for="parrafo">Color de parrafo:</label>
         <input type="color" name="parrafo" id="parrafo" value="#d3d3d3">
-        <input type="submit" class="submit" value="Cambiar" onclick="cambiarParrafo(document.getElementById('parrafo'))">
+        <input type="submit" class="submit" value="Cambiar" onclick="cambiarParrafo('parrafo', document.getElementById('parrafo').value)">
     </div>
-
-    
-
-    <script src="script.js"></script>
-
     
     <footer>
         <hr>
@@ -52,6 +47,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

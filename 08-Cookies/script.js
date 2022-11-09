@@ -1,21 +1,35 @@
-// Funcion que crea la cookie
-function crearNombre(nombre) {
-    
-    // Solo la crea si no está creada ya
-    if(nombre.value != "") document.cookie = encodeURIComponent(nombre.value)+";"+"max-age=10";
 
-    // Si la cookie está creada oculta el botón de crear y llama a la función que la muestra
-    if (document.cookie) {
-        var crear = document.getElementById("crear");
-        crear.style.opacity = 0
-        
-        mostrarNombre(document.cookie);
+// Funcion que crea la cookie
+function crearCookie(nombre, valor, edad = 20) {
+    let cookie = encodeURIComponent(nombre) + "=" + encodeURIComponent(valor);
+    // Solo la crea si no está creada ya
+    if(valor !== "" && !leerCookie(cookie)) {
+        document.cookie = cookie + ";" + "max-age=" + edad;
+    }
+
+    // Si la cookie es el nombre del usuario, la muestra y oculta el botón de crearla
+    if (nombre === "nombre") {
+        if (leerCookie(cookie)) {
+            let crear = document.getElementById("crear");
+            crear.style.opacity = 0
+
+            mostrarNombre(cookie);
+        }
     }
 }
 
-// Función que muestra la cookie
-function mostrarNombre(nombre) {
-    var bienvenida = document.getElementById("bienvenida");
+// Funcion que comprueba si una cookie dada existe
+function leerCookie(nombre) {
+    console.log(nombre);
+    let cookies = document.cookie.split(";");
+    let existe = false;
+    cookies.forEach(cookie => {if (cookie == nombre) existe = true;});
+    return existe;
+}
+
+// Función que muestra la cookie nombre
+function mostrarNombre(cookie) {
+    let nombre = cookie.split("=")[1];
     bienvenida.innerHTML = "Bienvenido " + decodeURIComponent(nombre);
     
     // Al mostrar la cookie también mostramos el botón para poder borrarla y los ajustes de la página
@@ -23,11 +37,34 @@ function mostrarNombre(nombre) {
     ajustes.style.opacity = 100;
 }
 
-// Función que borra la cookie
-function borrarNombre(nombre) {
+// Función que muestra todas las cookies
+function mostrarCookies(cookies) {
+    cookies = cookies.split(";");
+    console.log(cookies);
+    let nombre = cookies[0];
+    if (cookies.length == 2) {
+        if (cookies[1].split("=")[0] === "fondo") {
+            let fondo = decodeURIComponent(cookies[1].split("=")[1]);
+            cambiarFondo("fondo", fondo);
+        }
+        else if (cookies[1].split("=")[0] === "parrafo"){
+            let parrafo = decodeURIComponent(cookies[1].split("=")[1]);
+            cambiarParrafo("parrafo", parrafo);
+        }
+    }
+    mostrarNombre(nombre);
+}
 
+// Función que borra las cookies
+function borrarCookies() {
+    let cookies = document.cookie.split(";");
+    console.log(cookies);
     // Solo la borra si existe
-    if (document.cookie) document.cookie = encodeURIComponent(nombre.value) + ";" + "max-age=0";
+    cookies.forEach(cookie => {
+        document.cookie = cookie + ";max-age=0";
+    });
+
+    colorFondo("#d3d3d3");
 
     // Oculta el botón de borrarla y muestra el de crear una nueva
     borrar.style.opacity = 0;
@@ -35,52 +72,55 @@ function borrarNombre(nombre) {
     crear.style.opacity = 100;
 
     // Muestra la cookie borrada (no muestra nada)
-    bienvenida.innerHTML = document.cookie;
+    bienvenida.innerHTML = "";
     
     // Restablece el input para introducir una cookie nueva
-    nombre.value = "";
+    crear = "";
 }
 
-var crear = document.getElementById("crear");
-var borrar = document.getElementById("borrar");
-var ajustes = document.getElementById("ajustes");
+// Comprueba si existe la cookie, si no existe la crea y llama a la función que cambia el fondo
+function cambiarFondo(nombre, color) {
+    let cookie = nombre + "=" + color;
+    if (!leerCookie(cookie)) crearCookie(nombre, color);
 
-// Solo si no hay cookie muestra el botón de crear una
+    colorFondo(color);
+}
+
+// Cambia el color de fondo de la página y todos sus elementos
+function colorFondo(color) {
+    let elementos = document.body.getElementsByTagName("*");
+    document.body.style.backgroundColor = color;
+    Array.prototype.forEach.call(elementos, elemento => {
+        if (elemento.type !== "submit") elemento.style.backgroundColor = color;
+    });
+    document.getElementById("fondo").value = color;
+    document.getElementById("parrafo").value = color;
+}
+
+// Cambia el color de fondo del párrafo
+function cambiarParrafo(nombre, color) {
+    // Si no existe la cookie la crea
+    let cookie = nombre + "=" + color;
+    if (!leerCookie(cookie)) crearCookie(nombre, color);
+
+    let elementos = document.body.getElementsByTagName("p");
+
+    Array.prototype.forEach.call(elementos, elemento => {
+        elemento.style.backgroundColor = color;
+    });
+
+    document.getElementById("parrafo").value = color;
+}
+
+let bienvenida = document.getElementById("bienvenida");
+let crear = document.getElementById("crear");
+let borrar = document.getElementById("borrar");
+let ajustes = document.getElementById("ajustes");
+
+// Solo si no hay cookie nombre muestra el botón de crear una
 if (!document.cookie) crear.style.opacity = 100;
 
-// Si hay una cookie la muestra directamente
-else mostrarNombre(document.cookie);
-
-// Funcion que comprueba si una cookie existe dado su nombre
-function leerCookie(nombre) {
-    
-    nombre = " " + nombre;
-    var cookies = document.cookie.split(";");
-    var existe = false;
-    cookies.forEach(cookie => {
-        var nombre_valor = cookie.split("=");
-        console.log(nombre_valor);
-        console.log(nombre_valor[0] == nombre);
-        if (nombre_valor[0] == nombre) existe = true;
-    });
-    return existe;
-}
-
-
-function cambiarFondo(fondo) {
-
-    var elementos = document.body.getElementsByTagName("*");
-    document.body.style.backgroundColor = fondo.value;
-    
-    Array.prototype.forEach.call(elementos, elemento => {
-        if (elemento.type != "submit") elemento.style.backgroundColor = fondo.value;
-    });
-}
-
-function cambiarParrafo(fondo) {
-    var elementos = document.body.getElementsByTagName("p");
-
-    Array.prototype.forEach.call(elementos, elemento => {
-        elemento.style.backgroundColor = fondo.value;
-    });
+// Si hay una cookie nombre la muestra directamente junto a sus ajustes
+else {
+    mostrarCookies(document.cookie);
 }
