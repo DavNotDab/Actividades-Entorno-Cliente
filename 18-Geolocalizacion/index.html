@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+            type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+            type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"
+            type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css"
+          href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <title>Firebase</title>
+</head>
+<body>
+    <p id="geolocation"></p>
+    <br>
+    <button id="actualizar" onclick="getLocation()">Actualizar ubicación</button>
+    <br>
+    <button id="actualizarConstantemente" onclick="getLocationConstantly()">Actualizar ubicación constantemente</button>
+    (Durante 15 segundos)
+    <br>
+    <button id="crearMapa" onclick="initMap()">Crear Mapa</button>
+    <p id="distancia"></p>
+    <div style="width: 800px; height: 700px" id="mapContainer"></div>
+    <p id="ubicacion"></p>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

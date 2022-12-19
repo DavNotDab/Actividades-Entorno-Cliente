@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego parejas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<aside class="left-side">
+    <h1 id="title">Memory Game</h1>
+    <div class="options">
+        <div class="difficulty">
+            <label for="level">Difficulty:</label>
+            <select name="level" id="level">
+                <option value="1">Easy</option>
+                <option value="2">Medium</option>
+                <option value="3">Hard</option>
+            </select>
+        </div>
+        <div class="time">
+            <p id="temporizador"></p>
+        </div>
+        <button id="restart" onclick="startGame()">Start</button>
+    </div>
+</aside>
+
+<div id="game-area">
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

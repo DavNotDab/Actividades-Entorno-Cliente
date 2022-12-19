@@ -1,0 +1,74 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #FFFFFF;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.left-side {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 50px 20px;
+}
+
+#title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#restart {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#game-area {
+    display: grid;
+    gap: 10px;
+}
+
+.card-button {
+    border: 0;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 0;
+    height: 98.5%;
+}
+
+.flipped img {
+    opacity: 0;
+}
+
+.card-image {
+    border: 1px solid #000000;
+}
